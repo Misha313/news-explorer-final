@@ -5,7 +5,7 @@ export default class NewsApi {
   }
 
   getNews(keyWord, pageSize = 50) {
-    return fetch(`${this.baseUrl}q=${keyWord}&pageSize=${pageSize}&apiKey=${this.apiKey}`)
+    return fetch(`${this.baseUrl}q=${keyWord}&pageSize=${pageSize}&apiKey=${this.apiKey}`, { mode: "no-cors" })
       .then((res) => {
         if (res.ok) {
           return res.json()

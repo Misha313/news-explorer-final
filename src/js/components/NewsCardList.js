@@ -75,6 +75,7 @@ export default class NewsCardList {
           this.resultBlock.style.display = 'none'
 
         } else {
+          this.preloader.style.display = 'none'
           this.resultBlock.style.display = 'flex'
           this.articlesCurrent = res.articles
           this.addCards()
