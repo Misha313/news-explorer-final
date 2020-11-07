@@ -5,6 +5,7 @@ export default class Header {
     this.headerBtn = this.header.querySelector('.button')
     this.savedLink = this.header.querySelector('.header-nav__link-saved')
     this.btn = this.header.querySelector('.button')
+    this.menuBurger = header.querySelector('.header__menu-burger')
   }
 
   _render(isLoggedIn = 0, userName) {
@@ -23,6 +24,12 @@ export default class Header {
       localStorage.removeItem('token')
       window.location.reload()
       console.log(localStorage.getItem('token'));
+    })
+  }
+
+  setBurgerListener() {
+    this.menuBurger.addEventListener('click', () => {
+      document.querySelector('.header__menu-burger-content').style.display = 'flex'
     })
   }
 
