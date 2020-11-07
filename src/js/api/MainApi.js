@@ -10,7 +10,6 @@ export default class MainApi {
     return fetch(`${this.baseUrl}/signin`, {
       method: 'POST',
       headers: this.headers,
-      credentials: 'include',
       body: JSON.stringify({
         password,
         email,
@@ -29,7 +28,6 @@ export default class MainApi {
     return fetch(`${this.baseUrl}/signup`, {
       method: 'POST',
       headers: this.headers,
-      credentials: 'include',
       body: JSON.stringify({
         email,
         password,
@@ -52,7 +50,6 @@ export default class MainApi {
       headers: {
         authorization: `Bearer ${localStorage.getItem('token')}`
       },
-      credentials: 'include',
     })
       .then((res) => {
         if (res.ok) {
@@ -68,7 +65,6 @@ export default class MainApi {
       headers: {
         authorization: `Bearer ${localStorage.getItem('token')}`
       },
-      credentials: 'include',
     }).then((res) => {
       if (!res.ok) return Promise.reject(res.status);
       return res.json();
@@ -83,7 +79,6 @@ export default class MainApi {
         'Content-Type': 'application/json',
         authorization: `Bearer ${localStorage.getItem('token')}`
       },
-      credentials: 'include',
       body: JSON.stringify({
         keyword, title, text, date, source, link, image,
       }),
@@ -104,7 +99,6 @@ export default class MainApi {
         'Content-Type': 'application/json',
         authorization: `Bearer ${localStorage.getItem('token')}`
       },
-      credentials: 'include',
     })
       .then((res) => {
         if (res.ok) {
