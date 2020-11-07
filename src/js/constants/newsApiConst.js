@@ -1,4 +1,5 @@
 export const configNewsApi = {
-  baseUrl: 'http://newsapi.org/v2/everything?',
+  baseUrl: 'https://nomoreparties.co/news/v2/top-headlines?',
   apiKey: 'a62507c35dbc4506b75ac81de50b8d04'
 }
+

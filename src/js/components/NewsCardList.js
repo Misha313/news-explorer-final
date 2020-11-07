@@ -12,6 +12,7 @@ export default class NewsCardList {
     this.articlesCurrent = undefined;
     this.showMoreBtn = showMoreBtn;
     this.keyWord = this.searchField.value
+    this.news = []
   }
   setEventListener() {
     this.searchBtn.addEventListener('click', (evt) => this.handlerSubmitSearch.bind(this)(evt))
