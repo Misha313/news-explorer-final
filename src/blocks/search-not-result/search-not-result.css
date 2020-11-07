@@ -1,0 +1,10 @@
+@import url(./__content/search-not-result__content.css);
+@import url(./__image/search-not-result__image.css);
+@import url(./__text/search-not-result__text.css);
+@import url(./__title/search-not-result__title.css);
+
+.search-not-result {
+  display: none;
+  background: #F5F6F7;
+  justify-content: center;
+}

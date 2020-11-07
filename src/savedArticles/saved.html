@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>News explorer</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='<%=htmlWebpackPlugin.files.css%>'>
+  <script type="module" src='<%=htmlWebpackPlugin.files.js%>' defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="wrapper-content-center">
+      <h2 class="logo logo_theme_light">NewsExplorer</h2>
+      <div class="header__nav">
+        <a class="header-nav__link header__nav-link_theme_light" href="index.html">Главная</a>
+        <a class="header-nav__link header__nav-link_theme_light header-nav__link-saved" href="saved.html">Сохраненные статьи</a>
+        <button class="button button_theme_light"><span>Грета</span>  <img class="button__logout" src="<%=require('../images/logout.svg')%>" alt="exit" > </button>
+      </div>
+      <div class="header__menu-burger header__menu-burger_theme_light">
+        <div class="header__menu-burger-content">
+          <img src="<%=require('../images/close.svg')%>" alt="close" class="header__menu-burger-close">
+          <a class="header-nav__link " href="index.html">Главная</a>
+          <a class="header-nav__link " href="saved.html">Сохраненные статьи</a>
+          <button class="button button-burger">Авторизоваться</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="saved-info">
+    <p class="saved-info__subtitle">Сохраненные статьи</p>
+    <h2 class="saved-info__title"><span class="Name">Грета</span> , у вас <span class="NumberArticles">5</span>  сохранённых статей</h2>
+    <p class="saved-info__keywords-title">По ключевым словам:  <span class="saved-info__keywords">Природа,Тайга</span> <span class=" and" style=" padding-left: 8px;">и</span>  <span class="saved-info__keywords saved-info__keywords-more"> <span class="saved-info__keywords saved-info__number">2</span>  другим</span> </p>
+  </section>
+  <section class="result">
+    <div class="result__content">
+      <div class="result__container">
+    </div>
+</div>
+  </section>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__copyright"> &#169; 2020 Supersite, Powered by News API</div>
+      <div class="footer__nav">
+        <div class="footer__links">
+          <a href="#" class="footer__link">Главная</a>
+          <a href="#" class="footer__link">Яндекс.Практикум</a>
+        </div>
+        <div class="footer__social-nw">
+          <a class="footer__social-link" href="#"><img src="<%=require('../images/github.svg')%>" alt="github"></a>
+          <a class="footer__social-link" href="#"><img src="<%=require('../images/facebook.svg')%>" alt="facebook"></a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+</body>
+</html>

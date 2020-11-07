@@ -1,0 +1,17 @@
+.news-card__save-icon {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  background: url(../../../images/save.svg);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.news-card__save-icon:hover {
+  background: url(../../../images/saveHover.svg);
+}
+
+.news-card__save-icon:active {
+  background: url(../../../images/saveActive.svg);
+}
