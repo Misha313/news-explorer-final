@@ -10,11 +10,15 @@ export default class Popup {
     this._openReg = this._openReg.bind(this);
     this._close = this._close.bind(this);
     this.classHeader = classHeader
+    this.buttonBurger = document.querySelector('.button-burger')
   }
 
 
 
   _open(evt) {
+    if (evt.target.classList.contains('button-header')) {
+      document.querySelector('.header__menu-burger-content').style.display = 'none'
+    }
     if (evt.target.textContent === 'Авторизоваться') {
       this._popupReg.style.display = 'none'
       this._popup.style.display = 'flex'
@@ -38,6 +42,7 @@ export default class Popup {
 
   _setHandlers() {
     this._buttonHeader.addEventListener('click', this._open)
+    this.buttonBurger.addEventListener('click', this._open)
     this._closePopups.forEach(icon => {
       icon.addEventListener('click', this._close)
     })

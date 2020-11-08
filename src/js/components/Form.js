@@ -37,7 +37,7 @@ export default class Form {
           localStorage.setItem('token', res.token)
           this._form.closest('.popup').style.display = 'none'
           this.classHeader.checkLogin()
-
+          window.location.reload()
         }
       })
       .catch(err => {

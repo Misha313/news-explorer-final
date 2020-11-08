@@ -20,6 +20,7 @@ import SavedArticles from '../js/components/SavedArticles';
   classHeader.checkLogin()
   classHeader.redirect()
   classHeader.logoutInSave()
+  classHeader.setBurgerListener()
 
 
   const savedArticles = new SavedArticles(mainApi, newsCard);

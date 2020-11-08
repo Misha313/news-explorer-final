@@ -90,6 +90,7 @@ export default class SavedArticles {
             const card = evt.target.closest('.news-card')
             this.api.deleteNews(id)
             card.remove()
+            // this.getCurrentNews()
             const current = this.savedInfoTitle.querySelector('.NumberArticles').textContent
             const currentAfterDel = current - 1
             this.savedInfoTitle.querySelector('.NumberArticles').textContent = currentAfterDel

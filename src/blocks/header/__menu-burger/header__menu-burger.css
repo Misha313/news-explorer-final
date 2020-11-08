@@ -7,8 +7,13 @@
   display: none;
 }
 
+
+
+
 @media screen and (max-width:650px) {
   .header__menu-burger {
     display: flex;
   }
+
+
 }

@@ -40,6 +40,7 @@ import { configNewsApi } from "./js/constants/newsApiConst";
 
   const classHeader = new Header(mainApi, header);
   classHeader.checkLogin()
+  classHeader.setBurgerListener()
 
 
 

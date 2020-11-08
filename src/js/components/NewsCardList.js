@@ -33,7 +33,6 @@ export default class NewsCardList {
   }
 
   addCards() {
-    this.resultContainer.textContent = ''
     if (this.articlesCurrent.length >= 3) {
       for (let index = 0; index < 3; index++) {
         this.resultContainer.appendChild(this.createCard.create(
@@ -71,9 +70,11 @@ export default class NewsCardList {
     this.newsApi.getNews(keyWord)
       .then(res => {
         this.preloader.style.display = 'none'
+        this.resultContainer.textContent = ''
         if (res.articles.length === 0) {
           this.searchNotResult.style.display = 'flex'
           this.resultBlock.style.display = 'none'
+          console.log(res);
 
         } else {
           this.preloader.style.display = 'none'
