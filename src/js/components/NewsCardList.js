@@ -85,6 +85,7 @@ export default class NewsCardList {
       })
       .catch((err) => {
         this.searchNotResult.style.display = 'flex'
+        this.preloader.style.display = 'none'
         document.querySelector('.search-not-result__title').textContent = 'Какая-то проблема'
         document.querySelector('.search-not-result__text').textContent = 'Повторите попытку или попробуйте позже'
         console.log(err);
