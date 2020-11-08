@@ -3,12 +3,8 @@
 .header__menu-burger {
   width: 24px;
   height: 24px;
-  background-image: url(/src/images/burgerMenu.svg);
+  background-image: url(../../../images/burgerMenu.svg);
   display: none;
-}
-
-.header__menu-burger:hover {
-  background-image: url(/src/images/burgerMenu.svg);
 }
 
 
